@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Moneyger</title>
+
+		<!-- update the version number as needed -->
+		<script defer src="/__/firebase/8.2.1/firebase-app.js"></script>
+		<!-- include only the Firebase features as you need -->
+		<script defer src="/__/firebase/8.2.1/firebase-auth.js"></script>
+		<script defer src="/__/firebase/8.2.1/firebase-firestore.js"></script>
+		<!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+		<script defer src="/__/firebase/init.js?useEmulator=true"></script>
+		<script defer src="app.js"></script>
+	</head>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="shortcut icon" href="images/icon/shopping-cart (32x32).ico" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+		rel="stylesheet"
+	/>
+	<body>
+		<nav>
+			<div class="grid-left">
+				<ul>
+					<li>
+						<img
+							src="/images/icon/shopping-cart (inverted).png"
+							height="40px"
+							width="40px"
+						/>
+					</li>
+					<li><h3>| Moneyger</h3></li>
+				</ul>
+			</div>
+			<div class="grid-right">
+				<div id="auth">
+					<div id="whenSignedOut"><button id="signInBtn">sign in</button></div>
+					<div id="whenSignedIn" hidden="true">
+						<button id="signOutBtn">sign out</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div id="dashboard" hidden="true">
+			<div id="jumbotron" class="container">
+				<div id="chart"></div>
+			</div>
+			<div id="itemStats" class="container">list of store items with stats</div>
+		</div>
+		<footer>
+			<div id="contactDetails">
+				<span>get in touch with the developer: escobin.neil@gmail.com</span>
+			</div>
+		</footer>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts">
+		document.cookie = "Set-Cookie: SameSite=None; Secure";
+	</script>
+</html>

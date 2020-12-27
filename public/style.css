@@ -1,0 +1,122 @@
+/* custom scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* global element styling */
+*,
+html {
+	font-family: "Oswald", sans-serif;
+	font-size: 18px;
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: center;
+}
+body {
+	width: 100vw;
+	overflow-x: hidden;
+}
+li {
+	list-style: none;
+}
+span {
+	font-size: 16px;
+	color: #555;
+}
+h1 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 20px;
+}
+button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+/* nav styling */
+
+nav {
+	width: 100%;
+	height: 50px;
+	background: #ff66ff;
+}
+nav .grid-right {
+	float: right;
+	height: 100%;
+}
+nav .grid-right #auth {
+	margin: 10px !important;
+}
+nav .grid-left {
+	float: left;
+}
+nav .grid-left ul {
+	display: flex;
+	margin: 5px 10px !important;
+	padding: 0 !important;
+}
+nav .grid-left ul li h3 {
+	margin: 5px 10px !important;
+}
+#dashboard {
+	height: 100%;
+	width: 100vw;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+#dashboard .container {
+	width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+#dashboard #jumbotron {
+	height: 320px;
+	width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#dashboard #jumbotron #chart {
+	height: 300px;
+	width: 90vw;
+	padding: 0 !important;
+	margin: 0 5vw !important;
+}
+#dashboard #itemStats {
+	height: 320px;
+}
+footer {
+	width: 100vw;
+	height: 60px;
+	background-color: #888;
+	padding-top: 2vh !important;
+	bottom: 0 !important;
+}
+footer #contactDetails {
+	margin: 10px auto !important;
+}
+
+@media only screen and (max-width: 600px) and (max-width: 540px) and (max-width: 375px) {
+	#jumbotron {
+	}
+}
