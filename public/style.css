@@ -1,5 +1,6 @@
 /* custom scrollbar */
 ::-webkit-scrollbar {
+	max-height: 11px;
 	width: 10px;
 }
 /* Track */
@@ -59,36 +60,31 @@ nav {
 	height: 50px;
 	background: #ff66ff;
 }
-nav .grid-right {
+nav .gridRight {
 	float: right;
 	height: 100%;
 }
-nav .grid-right #auth {
+nav .gridRight #auth {
 	margin: 10px !important;
 }
-nav .grid-left {
+nav .gridLeft {
 	float: left;
 }
-nav .grid-left ul {
+nav .gridLeft ul {
 	display: flex;
 	margin: 5px 10px !important;
 	padding: 0 !important;
 }
-nav .grid-left ul li h3 {
+nav .gridLeft ul li h3 {
 	margin: 5px 10px !important;
 }
-#dashboard {
+section#dashboard {
 	height: 100%;
 	width: 100vw;
 	margin: 0 !important;
 	padding: 0 !important;
 }
-#dashboard .container {
-	width: 100%;
-	margin: 0 !important;
-	padding: 0 !important;
-}
-#dashboard #jumbotron {
+section#dashboard #jumbotron {
 	height: 320px;
 	width: 100%;
 	margin: 0 !important;
@@ -96,14 +92,83 @@ nav .grid-left ul li h3 {
 	overflow: hidden;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-#dashboard #jumbotron #chart {
+section#dashboard #jumbotron #chart {
 	height: 300px;
 	width: 90vw;
 	padding: 0 !important;
 	margin: 0 5vw !important;
 }
-#dashboard #itemStats {
-	height: 320px;
+
+section#dashboard #itemCardContainer {
+	height: 500px;
+	width: 100vw;
+	margin: 0 !important;
+	padding: 0 !important;
+	display: flex;
+	overflow-y: auto;
+}
+section#dashboard #itemCardContainer .itemCard {
+	margin: 100px 20px !important;
+	height: 300px;
+	min-width: 200px !important;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.itemCard:hover {
+	transform: translateY(-1rem);
+}
+
+.itemCard:not(:first-child) {
+	margin-left: -130px;
+}
+section#inventory {
+	height: 100%;
+	width: 100vw;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+section#inventory #addItemCard {
+	margin: 100px auto !important;
+	height: 400px;
+	width: 300px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section#inventory #addItemCard span {
+	border-bottom: 1px solid #000;
+}
+section#inventory #addItemCard input {
+	text-align: left !important;
+	outline: none;
+	height: 25px;
+	width: 250px;
+	margin-bottom: 30px !important;
+	border: 0;
+	border-bottom: 1px solid #ff66ff;
+}
+section#inventory #addItemCard input:focus-within {
+	height: 22px;
+	border-bottom: 3px solid #ff66ff;
+}
+section#inventory #addItemCard input:hover {
+	height: 22px;
+	border-bottom: 3px solid #ff66ff;
+}
+section#inventory #addItemCard #saveItemBtn {
+	color: #3cb043;
+	margin-top: 10px !important;
+	height: 43px;
+	width: 80px;
+	border-radius: 10px;
+}
+section#inventory #addItemCard #saveItemBtn:hover {
+	border: 3px solid #3cb043;
+	height: 40px;
 }
 footer {
 	width: 100vw;
@@ -117,6 +182,4 @@ footer #contactDetails {
 }
 
 @media only screen and (max-width: 600px) and (max-width: 540px) and (max-width: 375px) {
-	#jumbotron {
-	}
 }

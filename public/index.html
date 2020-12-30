@@ -25,7 +25,7 @@
 	/>
 	<body>
 		<nav>
-			<div class="grid-left">
+			<div class="gridLeft">
 				<ul>
 					<li>
 						<img
@@ -37,7 +37,7 @@
 					<li><h3>| Moneyger</h3></li>
 				</ul>
 			</div>
-			<div class="grid-right">
+			<div class="gridRight">
 				<div id="auth">
 					<div id="whenSignedOut"><button id="signInBtn">sign in</button></div>
 					<div id="whenSignedIn" hidden="true">
@@ -46,12 +46,28 @@
 				</div>
 			</div>
 		</nav>
-		<div id="dashboard" hidden="true">
-			<div id="jumbotron" class="container">
+		<section id="dashboard" hidden="true">
+			<div id="jumbotron">
 				<div id="chart"></div>
 			</div>
-			<div id="itemStats" class="container">list of store items with stats</div>
-		</div>
+			<div id="itemCardContainer">
+				<h1>list of items should be here</h1>
+				<div class="itemCard"><span>item 1</span></div>
+			</div>
+		</section>
+		<section id="inventory" hidden="true">
+			<div id="addItemCard">
+				<span>introduce new item</span><br /><br />
+				<label for="item-name">Item name</label><br />
+				<input type="text" name="item-name" id="itemNameInpt" /><br />
+				<label for="item-description">Item description</label><br />
+				<input type="text" name="item-description" id="itemDescInpt" /><br />
+				<label for="item-cost">Item cost</label><br />
+				<input type="number" name="item-cost" id="itemCostInpt" /><br />
+				<button id="saveItemBtn">save</button>
+			</div>
+		</section>
+		<section id="cashRegister" hidden="true"></section>
 		<footer>
 			<div id="contactDetails">
 				<span>get in touch with the developer: escobin.neil@gmail.com</span>
